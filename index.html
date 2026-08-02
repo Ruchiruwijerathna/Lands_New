@@ -657,7 +657,7 @@
             const locAvg = Object.entries(locPrices)
                 .filter(([, a]) => a.length >= 2)
                 .map(([l, a]) => [l, Math.round(a.reduce((x, y) => x + y, 0) / a.length)])
-                .sort((a, b) => b[1] - a[1]).slice(0, CFG.TOP_PRICE_LOCATIONS_COUNT || 15);
+                .sort((a, b) => b[1] - a[1]).slice(0, CFG.TOP_PRICE_LOCATIONS_COUNT || 50);
             mkChart('locationPriceBar', {
                 type: 'bar',
                 data: {
